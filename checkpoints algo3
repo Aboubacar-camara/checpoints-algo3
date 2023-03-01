@@ -1,0 +1,15 @@
+int insertionSort(int arr[], int size) { 
+    int i, key, j; 
+    for (i = 1; i < size; i++) { 
+        key = arr[i]; 
+        j = i - 1; 
+  
+        /* Déplacez les éléments du tableau arr[0..i-1], qui sont plus grands que la clé "key", vers une position avant leur position actuelle dans le tableau */
+        while (j >= 0 && arr[j] > key) { 
+            arr[j + 1] = arr[j]; 
+            j = j - 1
+        } 
+        arr[j + 1] = key; 
+    } 
+   return 0; 
+}
